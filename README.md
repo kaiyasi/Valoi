@@ -1,2 +1,0 @@
-# Valoi
-teat bot
