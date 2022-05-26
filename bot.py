@@ -39,7 +39,7 @@ async def upic(ctx):
     random_upic = random.choice(jdata['pic-url'])
     await ctx.send(random_upic)
 
-# 觸發(本機圖片)
+# 觸發(本機圖片 )
 @bot.command()
 async def pic(ctx):
     random_pic = random.choice(jdata['pic'])
