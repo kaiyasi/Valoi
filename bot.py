@@ -11,10 +11,14 @@ with open('setting.json','r',encoding='utf8') as jfile:
 bot = commands.Bot(command_prefix=".", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
-    print("====== 機器人上線 =======\n")
-    print(" 登錄系統端: " + str(bot.user) +"\n")
-    print(" 系統端版本: " + (jdata['verson']) +"\n")
-    print("=========================")
+    state = ("======== 機器人上線 =========\n"
+    " 登錄系統端: " + str(bot.user) +"\n"
+    " 系統端版本: " + (jdata['verson']) +"\n"
+    "==========================")
+    print(state)
+    channel = bot.get_channel(int(jdata['data']))
+    await channel.send(state)  
+
 
 # 加入訊息
 @bot.event
@@ -35,16 +39,8 @@ async def ping(ctx):
 
 # 觸發(網址圖片)
 @bot.command()
-async def upic(ctx):
-    random_upic = random.choice(jdata['pic-url'])
-    await ctx.send(random_upic)
-
-# 觸發(本機圖片 )
-@bot.command()
 async def pic(ctx):
-    random_pic = random.choice(jdata['pic'])
-    pic = discord.File(random_pic)
-    await ctx.send(file=pic)
-
+    random_pic = random.choice(jdata['pic-url'])
+    await ctx.send(random_pic)
 
 bot.run(jdata['Token']) 
