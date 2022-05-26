@@ -1,3 +1,4 @@
+# 系統預設設定
 import discord
 from discord.ext import commands
 import json 
@@ -5,12 +6,12 @@ import json
 with open('setting.json','r',encoding='utf8') as jfile: 
     jdata = json.load(jfile)
 
-
+#機器人上線
 bot = commands.Bot(command_prefix=".", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
-    print(">> Bot is online <<")
-    print(bot.user)
+    print(">> 機器人上線 <<")
+    print("登錄系統端:") + (bot.user)
 
 @bot.event
 async def on_member_join(member):
@@ -26,6 +27,8 @@ async def on_member_remove(member):
 @bot.command()
 async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000)} ms')
+
+
 
 
 bot.run(jdata['Token']) 
