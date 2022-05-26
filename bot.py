@@ -6,7 +6,7 @@ with open('setting.json','r',encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
 
-bot = commands.Bot(command_prefix="/")
+bot = commands.Bot(command_prefix=".")
 @bot.event
 async def on_ready():
     print(">> Bot is online <<")
@@ -17,9 +17,10 @@ async def on_member_join(member):
     await channel.send(f'{member.name} joined!') 
 
 @bot.event
-async def on_member_remove(member):
+async def on_member_remove(member): 
     channel = bot.get_channel(int(jdata['leave']))
     await channel.send(f'{member.name} leave!')
+
 
 @bot.command()
 async def ping(ctx):
