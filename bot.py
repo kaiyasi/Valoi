@@ -35,8 +35,8 @@ async def ping(ctx):
 # 觸發(圖片)
 @bot.command()
 async def pic(ctx):
-    pic = discord.File('')
-
+    pic = discord.File('1d2426ba1a98b0d08d5cebb89d104656.png')
+    await ctx.send(file= pic)
 
 
 
