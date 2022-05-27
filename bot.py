@@ -24,20 +24,17 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel(int(jdata['Welcome']))
-    await channel.send(f'{member} joined!') 
+    await channel.send(f'{member}加入塔爾小鎮') 
 
 #離開訊息
 @bot.event
 async def on_member_remove(member): 
     channel = bot.get_channel(int(jdata['leave']))
-    await channel.send(f'{member} leave!')
+    await channel.send(f'{member}因為私人原因必須遷出塔爾小鎮')
 
-# 觸發(ping)
-    await ctx.send(f'{round(bot.latency*1000)} ms')
 
-# 觸發(網址圖片)
-    random_pic = random.choice(jdata['pic-url'])
-    await ctx.send(random_pic)
+
+
 
 if __name__ == "__main__":
     bot.run(jdata['Token']) 
