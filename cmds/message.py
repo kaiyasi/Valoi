@@ -12,8 +12,7 @@ with open('setting.json','r',encoding='utf8') as jfile:
 
 class Event(Cog_extension):
         
-
-# 觸發(文句)
+# 觸發(/v)
     @commands.Cog.listener()
     async def on_message(self,msg):
         if msg.content == '/v':
