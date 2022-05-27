@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 import json 
 import random
+import os
 
 with open('setting.json','r',encoding='utf8') as jfile: 
     jdata = json.load(jfile)
@@ -19,7 +20,6 @@ async def on_ready():
     channel = bot.get_channel(int(jdata['data']))
     await channel.send(state)  
 
-
 # 加入訊息
 @bot.event
 async def on_member_join(member):
@@ -33,14 +33,11 @@ async def on_member_remove(member):
     await channel.send(f'{member} leave!')
 
 # 觸發(ping)
-@bot.command()
-async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000)} ms')
 
 # 觸發(網址圖片)
-@bot.command()
-async def pic(ctx):
     random_pic = random.choice(jdata['pic-url'])
     await ctx.send(random_pic)
 
-bot.run(jdata['Token']) 
+if __name__ == "__main__":
+    bot.run(jdata['Token']) 
