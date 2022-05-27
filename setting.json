@@ -1,8 +1,12 @@
 {
-    "Token":"OTc5NzAxMjIxOTEwNzc3OTA3.Gt8nBV.GvzaDi069qYdBmxltrU30EW8G-y5BOTIelgF4M",
+
+    "Token":"OTc5NzAxMjIxOTEwNzc3OTA3.GK8oMX.Te13UdJ30-AY-7RaP6Tij3iBxyTeBFdJTPeUtU",
     "Welcome":"972718100019548203",
     "leave":"972718100019548203",
-    "verison":"A-1.0.2",
+    "verison":"F-1.0.3",
     "pic-url":["https://i.imgur.com/t3bi1ba.jpg","https://i.imgur.com/TlY99E3.jpg","https://i.imgur.com/aXuyoKc.jpg","https://i.imgur.com/KWIh5K6.jpg","https://i.imgur.com/DPCqkcF.jpg","https://i.imgur.com/sXxRBqg.jpg"],
-    "data":"979708290550345758"
+    "data":"979708290550345758",
+    "night":["很晚囉","吃晚餐了嗎","洗澡了嗎","have a good night!"],
+    "noon":["吃午餐了嗎","要不要睡個午覺呢 對身體很好喔","中午了 接下來還有下午跟往上喔 加油加油"]
+
 }

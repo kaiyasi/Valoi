@@ -26,7 +26,6 @@ class Main(Cog_extension):
     @commands.command()
     async def verison(self,ctx):
         await ctx.send("當前運行版本: "+jdata['verison'])
-
     
 
 
