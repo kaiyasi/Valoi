@@ -27,8 +27,16 @@ class Event(Cog_extension):
 # 觸發(文句)
     @commands.Cog.listener()
     async def on_message(self,msg):
+<<<<<<< HEAD
         if msg.content == '/ver':
             await msg.channel.send("當前運行版本: " + jdata['verison'])
+=======
+
+
+        if msg.content == '/v':
+            await msg.channel.send("當前運行版本: ")+(jdata['verison'])
+>>>>>>> 08e7aa37045aac968e9dfb7dc4f95f945fbd82c4
+
 
 def setup(bot):
     bot.add_cog(Event(bot))

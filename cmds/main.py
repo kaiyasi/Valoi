@@ -25,7 +25,12 @@ class Main(Cog_extension):
 # 觸發(對話 - Version)
     @commands.command()
     async def verison(self,ctx):
+<<<<<<< HEAD
         await ctx.send("當前運行版本: "+jdata['verison'])
+=======
+        await ctx.send("當前運行版本: "+ jdata['verison'])
+
+>>>>>>> 08e7aa37045aac968e9dfb7dc4f95f945fbd82c4
     
 
 
