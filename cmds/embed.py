@@ -24,6 +24,7 @@ class Main(Cog_extension):
         embed.add_field(name="⟳ 修正", value="• 對話系統 ", inline=False)
         embed.set_footer(text="Varoi B-1.0.4")
         await ctx.send(embed=embed)
+        await ctx.message.delete()
 
 def setup(bot):
     bot.add_cog(Main(bot))
