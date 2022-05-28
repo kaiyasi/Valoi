@@ -31,7 +31,7 @@ class Event(Cog_extension):
 
         if msg.content == '早安' and msg.author != self.bot.user:
             random_mo = random.choice(jdata['morning'])
-            await msg.channel.send('早安')
+            await msg.channel.send(random_mo)
 
 def setup(bot):
     bot.add_cog(Event(bot))
