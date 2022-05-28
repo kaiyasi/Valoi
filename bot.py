@@ -23,6 +23,7 @@ async def on_ready():
     channel = bot.get_channel(int(jdata['data']))
     await channel.send(state)
 
+
 for filename in os.listdir('./cmds'):
     if filename.endswith('.py'):
         bot.load_extension(f'cmds.{filename[:-3]}')
