@@ -14,10 +14,10 @@ bot = commands.Bot(command_prefix=".", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     state = ("=============================\n"
-    " 當前狀態: :green_circle: 運行中..." + "\n"
-    " 登錄系統端: " + str(bot.user) +"\n"
-    " 系統端版本: " + (jdata['verison']) +"\n"
-    " 當前時間: " + dt.now().strftime("%Y/%m/%d %H:%M:%S")+"\n"
+    "   當前狀態: :green_circle: 運行中..." + "\n"
+    "   登錄系統端: " + str(bot.user) +"\n"
+    "   系統端版本: " + (jdata['verison']) +"\n"
+    "   當前時間: " + dt.now().strftime("%Y/%m/%d %H:%M:%S")+"\n"
     "=============================")
     print(state)
     channel = bot.get_channel(int(jdata['data']))
