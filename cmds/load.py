@@ -10,7 +10,7 @@ import os
 with open('setting.json','r',encoding='utf8') as jfile: 
     jdata = json.load(jfile)
 
-class Main(Cog_extension):
+class Load(Cog_extension):
     # 載入/重載/卸載
 
     @commands.command()
@@ -31,4 +31,4 @@ class Main(Cog_extension):
         
 
 def setup(bot):
-    bot.add_cog(Main(bot))
+    bot.add_cog(Load(bot))

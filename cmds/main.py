@@ -58,5 +58,6 @@ class Main(Cog_extension):
         await ctx.channel.purge(limit=num+1)
         await ctx.send(f'```diff\n+ 已刪除{num}則訊息\n' + '```')
 
+
 def setup(bot):
     bot.add_cog(Main(bot))

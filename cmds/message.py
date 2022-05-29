@@ -10,7 +10,7 @@ import os
 with open('setting.json','r',encoding='utf8') as jfile: 
     jdata = json.load(jfile)
 
-class Event(Cog_extension):
+class Message(Cog_extension):
         
 # 觸發(/v)
     @commands.Cog.listener()
@@ -34,4 +34,4 @@ class Event(Cog_extension):
             await msg.channel.send(random_mo)
 
 def setup(bot):
-    bot.add_cog(Event(bot))
+    bot.add_cog(Message(bot))
