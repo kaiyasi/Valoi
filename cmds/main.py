@@ -19,12 +19,6 @@ class Main(Cog_extension):
     async def ping(self,ctx):
         await ctx.send(f'當前ping值: {round(self.bot.latency*1000)} /毫秒')
 
-# 觸發(網址圖片)
-    @commands.command()
-    async def pic(self,ctx):
-        random_pic = random.choice(jdata['pic-url'])
-        await ctx.send(random_pic)
-
 # 觸發(版本)
     @commands.command()
     async def verison(self,ctx):
