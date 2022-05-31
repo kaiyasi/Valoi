@@ -11,8 +11,8 @@ with open('setting.json','r',encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
 class Load(Cog_extension):
+    
     # 載入/重載/卸載
-
     @commands.command()
     async def load(self,ctx,extension):
         self.bot.load_extension(f'cmds.{extension}')
