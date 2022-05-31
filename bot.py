@@ -15,7 +15,7 @@ with open('setting.json','r',encoding='utf8') as jfile:
 
 
 #機器人上線
-bot = commands.Bot(command_prefix=".", intents=discord.Intents.all(),help_command=None)
+bot = commands.Bot(command_prefix="-", intents=discord.Intents.all(),help_command=None)
 @bot.event
 
 async def on_ready():
