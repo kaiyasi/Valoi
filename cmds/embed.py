@@ -30,7 +30,7 @@ class Embed(Cog_extension):
         embed.add_field(name="✚ 新增", value="• 機器人狀態系統 \n• 異步協成系統 \n• 指令大全 ", inline=True)
         embed.add_field(name="⟳ 更新", value="• 成員進出訊息 \n• Bot code程式碼 ", inline=False)
         #embed.add_field(name="━  移除", value="•  ", inline=False)
-        embed.set_footer(text="Varoi B-2.0.2")
+        embed.set_footer(text="Varoi " + jdata['version'])
         await ctx.send(embed=embed)
         await ctx.message.delete()
 
@@ -41,7 +41,7 @@ class Embed(Cog_extension):
         embed.set_author(name="Varoi開發團隊", icon_url="https://i.imgur.com/br7SNUs.jpg")
         random_boy = random.choice(jdata['boy'])
         embed.set_image(url=f'{random_boy}')
-        embed.set_footer(text="Varoi B-1.0.4")
+        embed.set_footer(text="Varoi " + jdata['version'])
 
         await ctx.send(embed=embed)
         await ctx.message.delete()
@@ -53,7 +53,7 @@ class Embed(Cog_extension):
         embed.set_author(name="Varoi開發團隊", icon_url="https://i.imgur.com/br7SNUs.jpg")
         random_girl = random.choice(jdata['girl'])
         embed.set_image(url=f'{random_girl}')
-        embed.set_footer(text="Varoi B-1.0.4")
+        embed.set_footer(text="Varoi " + jdata['version'])
 
         await ctx.send(embed=embed)
         await ctx.message.delete()
@@ -105,6 +105,7 @@ class Embed(Cog_extension):
         embed.set_footer(text=f'{member.guild.name}')
 
         await channel.send(embed=embed)
+
 
 def setup(bot):
     bot.add_cog(Embed(bot))

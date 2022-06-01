@@ -13,7 +13,7 @@ class Task(Cog_extension):
 
         async def interval():
             await self.bot.wait_until_ready()
-            self.channel = self.bot.get_channel(979997119689682958)
+            self.channel = self.bot.get_channel(979997119689682959)
             while not self.bot.is_closed():
                 with open('setting.json','r',encoding='utf8') as jfile:
                         jdata = json.load(jfile)
@@ -25,7 +25,7 @@ class Task(Cog_extension):
 #指定時間做某某事件  (時間計算方式 : 下午04:26 = 1626)
         async def time_task():
             await self.bot.wait_until_ready()
-            self.channel = self.bot.get_channel(979997119689682958)
+            self.channel = self.bot.get_channel(979997119689682959)
             self.counter = 0
             while not self.bot.is_closed():
                 now_time = datetime.datetime.now().strftime('%H%M')
